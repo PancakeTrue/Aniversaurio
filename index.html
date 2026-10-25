@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1er Aniversario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-tema="inicio">
+
+  <!-- ============ INICIO ============ -->
+  <section id="inicio" class="pantalla activa">
+    <header>
+      <div class="overlay">
+        <div class="corazones-fondo" id="corazonesHeader"></div>
+        <p class="subtitulo">Un año contigo</p>
+        <h1>| 1er Aniversario |</h1>
+        <p id="juntos" class="juntos"></p>
+      </div>
+    </header>
+
+    <div class="separador"></div> <!-- Barra de color -->
+
+    <main class="contenido-inicio">
+      <!-- Barra de amor -->
+      <section class="barra-amor">
+        <h2>Barra de amor</h2>
+        <div class="love-bar" role="progressbar" aria-label="Barra de amor">
+          <div class="love-fill">
+            <div class="love-bubbles"></div>
+            <span class="love-tip">❤</span>
+          </div>
+        </div>
+        <p class="love-texto" data-love-texto>0%</p>
+        <p class="love-hint" id="loveHint">Abre cada sección y descubre todo para llenarla.</p>
+      </section>
+
+      <section class="tarjetas">
+        <div class="tarjeta mujer">
+          <img src="imagenes/temas/ella.jpeg" alt="Foto de ella">
+          <h3>Paola Lizeth Almaraz Carreón</h3>
+          <p>Nacionalidad: Mexicana</p>
+          <div class="fecha-nacimiento">
+            <span class="campo">Día:</span> <span>1</span> |
+            <span class="campo">Mes:</span> <span>Julio</span> |
+            <span class="campo">Año:</span> <span>2005</span>
+          </div>
+          <p id="vidaElla">Días de vida: —</p>
+          <p id="edadElla">Edad: —</p>
+        </div>
+
+        <div class="corazon-centro" aria-hidden="true">❤</div>
+
+        <div class="tarjeta hombre">
+          <img src="imagenes/temas/el.jpeg" alt="Foto de él">
+          <h3>Oliver Oriel Salinas</h3>
+          <p>Nacionalidad: Panameño</p>
+          <div class="fecha-nacimiento">
+            <span class="campo">Día:</span> <span>6</span> |
+            <span class="campo">Mes:</span> <span>Septiembre</span> |
+            <span class="campo">Año:</span> <span>2001</span>
+          </div>
+          <p id="vidaEl">Días de vida: —</p>
+          <p id="edadEl">Edad: —</p>
+        </div>
+      </section>
+
+      <nav class="tabs">
+        <button class="tab tab-cosas" onclick="mostrarPantalla('cosas')">
+          <span class="tab-titulo">12 Cosas que he hecho</span>
+          <span class="badge" data-badge="cosas">0/12</span>
+        </button>
+        <button class="tab tab-razones" onclick="mostrarPantalla('razones')">
+          <span class="tab-titulo">12 razones de amarte</span>
+          <span class="badge" data-badge="razones">0/12</span>
+        </button>
+        <button class="tab tab-metas" onclick="mostrarPantalla('metas')">
+          <span class="tab-titulo">12 metas contigo</span>
+          <span class="badge" data-badge="metas">0/12</span>
+        </button>
+        <button class="tab tab-cartas" onclick="mostrarPantalla('cartas')">
+          <span class="tab-titulo">Cartas</span>
+          <span class="badge" data-badge="cartas">0/25</span>
+        </button>
+      </nav>
+    </main>
+  </section>
+
+  <!-- ============ 12 COSAS QUE HE HECHO ============ -->
+  <section id="cosas" class="pantalla interna">
+    <div class="topbar">
+      <button class="volver" onclick="mostrarPantalla('inicio')">← Inicio</button>
+      <h2>12 Cosas que he hecho</h2>
+      <div class="mini-bar"><div class="love-bar"><div class="love-fill"><div class="love-bubbles"></div></div></div></div>
+    </div>
+    <div class="contenido">
+      <p class="indicacion">Toca cada burbuja para descubrirla</p>
+      <div class="flotantes" id="listaCosas"></div>
+    </div>
+  </section>
+
+  <!-- ============ 12 RAZONES DE AMARTE ============ -->
+  <section id="razones" class="pantalla interna">
+    <div class="topbar">
+      <button class="volver" onclick="mostrarPantalla('inicio')">← Inicio</button>
+      <h2>12 razones de amarte</h2>
+      <div class="mini-bar"><div class="love-bar"><div class="love-fill"><div class="love-bubbles"></div></div></div></div>
+    </div>
+    <div class="contenido">
+      <p class="indicacion">Baja despacio: cada razón se ilumina al llegar al centro</p>
+      <div class="lista-razones" id="listaRazones"></div>
+    </div>
+  </section>
+
+  <!-- ============ 12 METAS CONTIGO ============ -->
+  <section id="metas" class="pantalla interna">
+    <div class="topbar">
+      <button class="volver" onclick="mostrarPantalla('inicio')">← Inicio</button>
+      <h2>12 metas contigo</h2>
+      <div class="mini-bar"><div class="love-bar"><div class="love-fill"><div class="love-bubbles"></div></div></div></div>
+    </div>
+    <div class="contenido">
+      <p class="indicacion">Voltea cada tarjeta y marca las que ya cumplimos</p>
+      <p class="contador-metas" id="contadorMetas"></p>
+      <div class="grid-metas" id="listaMetas"></div>
+    </div>
+  </section>
+
+  <!-- ============ CARTAS ============ -->
+  <section id="cartas" class="pantalla interna">
+    <div class="topbar">
+      <button class="volver" onclick="mostrarPantalla('inicio')">← Inicio</button>
+      <h2>Mis cartas</h2>
+      <div class="mini-bar"><div class="love-bar"><div class="love-fill"><div class="love-bubbles"></div></div></div></div>
+    </div>
+    <div class="contenido">
+      <p class="indicacion">Cada sobre guarda una carta. Los sellados llegarán pronto</p>
+      <div class="grid-cartas" id="listaCartas"></div>
+    </div>
+  </section>
+
+  <!-- ============ VENTANA (cosas y cartas) ============ -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-fondo" data-cerrar></div>
+    <article class="modal-tarjeta" role="dialog" aria-modal="true">
+      <button class="modal-cerrar" data-cerrar aria-label="Cerrar">✕</button>
+      <div class="modal-foto" id="modalFoto"><img alt="" id="modalImg"></div>
+      <div class="modal-cuerpo">
+        <span class="modal-etiqueta" id="modalEtiqueta"></span>
+        <h3 id="modalTitulo"></h3>
+        <p class="modal-fecha" id="modalFecha"></p>
+        <div class="modal-texto" id="modalTexto"></div>
+      </div>
+      <div class="modal-nav">
+        <button id="modalPrev" aria-label="Anterior">←</button>
+        <button id="modalNext" aria-label="Siguiente">→</button>
+      </div>
+    </article>
+  </div>
+
+  <div id="lluvia" aria-hidden="true"></div>
+
+  <script src="datos.js"></script>
+  <script src="script.js"></script>
+  <script src="sonidos.js"></script>
+</body>
+</html>
