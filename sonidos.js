@@ -6,18 +6,18 @@
   const CLAVE = 'aniv_sonido';
 
   const PLAYLIST = [
-    { titulo: 'Bruno Mars - Risk It All', archivo: 'musicas/cancion1.mp3' },
-    { titulo: 'Manuel Medrano - Una y Otra Vez', archivo: 'musicas/cancion2.mp3' },
-    { titulo: 'Kurt - La Mujer Perfecta', archivo: 'musicas/cancion3.mp3' },
-    { titulo: 'iñigo quintero - Si No Estás', archivo: 'musicas/cancion4.mp3' },
-    { titulo: 'Tom Odell - Another Love', archivo: 'musicas/cancion5.mp3' },
-    { titulo: 'Vicente Fernández - Un Millón de Primaveras', archivo: 'musicas/cancion6.mp3' },
-    { titulo: 'Ed Maverick - Fuentes De Ortiz', archivo: 'musicas/cancion7.mp3' },
-    { titulo: 'Amapolas - Leo Rizzi', archivo: 'musicas/cancion8.mp3' },
-    { titulo: 'Macaco - Coincidir', archivo: 'musicas/cancion9.mp3' },
-    { titulo: 'Jósean Log - Chachachá', archivo: 'musicas/cancion10.mp3' },
-    { titulo: 'LP - Lost On You', archivo: 'musicas/cancion11.mp3' },
-    { titulo: 'Christian Nodal - Mi Antes y Después', archivo: 'musicas/cancion12.mp3' },
+    { titulo: 'Bruno Mars - Risk It All', archivo: 'musica/cancion1.mp3' },
+    { titulo: 'Manuel Medrano - Una y Otra Vez', archivo: 'musica/cancion2.mp3' },
+    { titulo: 'Kurt - La Mujer Perfecta', archivo: 'musica/cancion3.mp3' },
+    { titulo: 'iñigo quintero - Si No Estás', archivo: 'musica/cancion4.mp3' },
+    { titulo: 'Tom Odell - Another Love', archivo: 'musica/cancion5.mp3' },
+    { titulo: 'Vicente Fernández - Un Millón de Primaveras', archivo: 'musica/cancion6.mp3' },
+    { titulo: 'Ed Maverick - Fuentes De Ortiz', archivo: 'musica/cancion7.mp3' },
+    { titulo: 'Amapolas - Leo Rizzi', archivo: 'musica/cancion8.mp3' },
+    { titulo: 'Macaco - Coincidir', archivo: 'musica/cancion9.mp3' },
+    { titulo: 'Jósean Log - Chachachá', archivo: 'musica/cancion10.mp3' },
+    { titulo: 'LP - Lost On You', archivo: 'musica/cancion11.mp3' },
+    { titulo: 'Christian Nodal - Mi Antes y Después', archivo: 'musica/cancion12.mp3' },
   ];
   const VOLUMEN_MUSICA = 0.3; // volumen inicial de la música (0 a 1)
 
