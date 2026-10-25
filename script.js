@@ -417,7 +417,7 @@ function contadorJuntos() {
 
 function tick() {
   calcularDatos('2005-07-01T10:00:00', 'vidaElla', 'edadElla');
-  calcularDatos('2001-09-06T9:00:00', 'vidaEl', 'edadEl');
+  calcularDatos('2001-09-06T09:00:00', 'vidaEl', 'edadEl');
   contadorJuntos();
 }
 tick();
